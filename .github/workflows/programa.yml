@@ -25,7 +25,7 @@ jobs:
           pip install requests
 
       - name: Executar el programa
-        run: python obtenir_temperatura.py
+        run: python testunit.py
 
       - name: Fer commit del fitxer .json
         run: |
