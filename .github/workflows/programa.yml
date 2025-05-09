@@ -8,6 +8,10 @@ on:
 jobs:
   execucio-temperatura:
     runs-on: ubuntu-latest
+    
+    # Configura els permisos per escriure al repositori
+    permissions:
+      contents: write  # Permet al workflow fer push
 
     steps:
       - name: Clonar el repositori
@@ -29,9 +33,9 @@ jobs:
 
       - name: Fer commit del fitxer .json
         run: |
-          git config user.name "github-actions"
+          git config user.name "paunieto23"
           git config user.email "actions@github.com"
           git add temp_*.json
-          git commit -m "Afegit fitxer de temperatura del dia"
+          git commit -m "Afegit fitxer de temperatura del dia" || echo "No hi ha canvis a commitejar"
           git push
 
