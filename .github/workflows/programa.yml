@@ -29,7 +29,7 @@ jobs:
           pip install requests
 
       - name: Executar el programa
-        run: python testunit.py
+        run: python meteo.py
 
       - name: Fer commit del fitxer .json
         run: |
